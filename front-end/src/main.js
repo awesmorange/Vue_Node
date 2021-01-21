@@ -3,7 +3,7 @@ import App from './App.vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-
+import 'sweetalert2/src/sweetalert2.scss'
 import vuetify from './plugins/vuetify';
 import router from './router';
 import echarts from 'echarts';
