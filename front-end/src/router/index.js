@@ -4,7 +4,6 @@ import Router from 'vue-router';
 import  Home from '@/components/Home'
 import AB from '@/components/test1-vuex/AB'
 import Table from '@/components/test2-vuetify-table/Table'
-import TableXin from '@/components/test2-vuetify-table/TableXin'
 import  DrawChart from '@/components/test3-echart/DrawEchart'
 import  Message from '@/components/test4-vuetify-message/Message'
 import Parent from "@/components/test5-vue/PropsAndEmit/Parent";
@@ -13,7 +12,6 @@ import Rotate3DCard from "../components/test6-rotate3DCard/Rotate3DCard";
 import SweetAlert from "../components/test7-sweetAlert/SweetAlert";
 import TestAxios from "../components/test8-axios/TestAxios";
 import Output from "../components/test9-BaseOfJS/Output";
-import ResetPass from "../components/test10-loginAPI/ResetPass";
 Vue.use(Router);
 
 export default new Router({
@@ -32,11 +30,6 @@ export default new Router({
             path: '/Table',
             name: 'Table',
             component: Table
-        },
-        {
-            path: '/TableXin',
-            name: 'TableXin',
-            component: TableXin
         },
         {
             path: '/DrawChart',
@@ -77,11 +70,6 @@ export default new Router({
             path: '/Output',
             name: 'Output',
             component: Output
-        },
-        {
-            path: '/ResetPass',
-            name: 'ResetPass',
-            component: ResetPass
         }
     ]
 })

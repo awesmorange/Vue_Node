@@ -1,16 +1,14 @@
 const Menu = [
     {title: 'vuex', icon: 'mdi-view-dashboard', path: 'AB'},
-    {title: 'vuetify-table1', icon: 'mdi-image', path: 'Table'},
-    {title: 'vuetify-table2', icon: 'mdi-image', path: 'TableXin'},
+    {title: 'vuetify-table', icon: 'mdi-image', path: 'Table'},
     {title: 'echart', icon: 'mdi-help-box', path: 'DrawChart'},
     {title: 'message-snackbar', icon: 'mdi-arrange-bring-forward', path: 'Message'},
     {title: 'component', icon: 'mdi-alarm-light-outline', path: 'Parent'},
     {title: 'conditional rendering', icon: 'mdi-help-box', path: 'CR'},
     {title: '3D Rotate Card',icon:'mdi-help-box',path: 'Rotate3DCard' },
     {title: 'sweet alert',icon:'mdi-help-box',path: 'SweetAlert' },
-    {title: 'package axios',icon:'mdi-help-box',path: 'TestAxios' },
+    {title: 'package axios',icon:'mdi-help-box',path: 'TestAxios' }
     // {title: 'js output',icon:'mdi-help-box',path: 'Output' },
-    {title: 'API test',icon:'mdi-help-box',path: 'ResetPass' },
 ];
 // reorder menu
 Menu.forEach(item => {

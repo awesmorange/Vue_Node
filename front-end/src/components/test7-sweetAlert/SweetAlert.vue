@@ -15,12 +15,7 @@
         },
         methods:{
             sweetAlert(){
-                this.$swal({
-                    title: '错误！',
-                    text: '是否继续',
-                    type: 'error',
-                    confirmButtonText: '酷'
-                })
+              this.$successAlert({})
             }
         }
     }
