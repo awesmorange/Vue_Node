@@ -1,8 +1,8 @@
 <template>
     <v-fab-transition>
-        <v-btn fab="fab" small dark="dark" fixed="fixed" bottom="bottom" right="right" color="red" v-scroll="onScroll"
+        <v-btn fab="fab" small dark="dark" fixed="fixed" bottom="bottom" right="right" color="orange" v-scroll="onScroll"
                v-show="fab" @click="toTop">
-            <v-icon>mdi-arrow-collapse-up</v-icon>
+            <v-icon>mdi-arrow-up</v-icon>
         </v-btn>
     </v-fab-transition>
 </template>

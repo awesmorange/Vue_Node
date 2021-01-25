@@ -1,4 +1,6 @@
 const Menu = [
+    // { header: 'Apps' },
+    // { divider: true },
     {title: 'vuex', icon: 'mdi-view-dashboard', path: 'AB'},
     {title: 'vuetify-table', icon: 'mdi-image', path: 'Table'},
     {title: 'echart', icon: 'mdi-help-box', path: 'DrawChart'},
