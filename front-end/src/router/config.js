@@ -67,6 +67,11 @@ export const EchartsPage =
                 path: '/DrawChart',
                 name: 'DrawChart',
                 component: () => import('@/components/test3-echart/DrawEchart')
+            },
+            {
+                path: '/BasicChart',
+                name: 'BasicChart',
+                component: () => import('@/components/test3-echart/BasicChart')
             }
         ]
     }

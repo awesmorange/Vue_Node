@@ -4,6 +4,7 @@ const Menu = [
     {title: 'vuex', icon: 'mdi-view-dashboard', path: 'AB'},
     {title: 'vuetify-table', icon: 'mdi-image', path: 'Table'},
     {title: 'echart', icon: 'mdi-help-box', path: 'DrawChart'},
+    {title: 'Basic Chart', icon: 'mdi-help-box', path: 'BasicChart'},
     {title: 'message-snackbar', icon: 'mdi-arrange-bring-forward', path: 'Message'},
     {title: 'component', icon: 'mdi-alarm-light-outline', path: 'Parent'},
     {title: 'conditional rendering', icon: 'mdi-help-box', path: 'CR'},
