@@ -53,6 +53,11 @@ export const VuetifyPage = {
             path: '/Table',
             name: 'Table',
             component: () => import('@/components/test2-vuetify-table/Table')
+        },
+        {
+            path: '/AutoCompletes',
+            name: 'AutoCompletes',
+            component: () => import('@/components/test10-AutoCompletes/AutoCompletes')
         }
     ]
 }

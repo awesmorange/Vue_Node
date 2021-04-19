@@ -10,7 +10,8 @@ const Menu = [
     {title: 'conditional rendering', icon: 'mdi-help-box', path: 'CR'},
     {title: '3D Rotate Card',icon:'mdi-help-box',path: 'Rotate3DCard' },
     {title: 'sweet alert',icon:'mdi-help-box',path: 'SweetAlert' },
-    {title: 'package axios',icon:'mdi-help-box',path: 'TestAxios' }
+    {title: 'package axios',icon:'mdi-help-box',path: 'TestAxios' },
+    {title: 'auto completes',icon:'mdi-help-box',path: 'AutoCompletes' }
     // {title: 'js output',icon:'mdi-help-box',path: 'Output' },
 ];
 // reorder menu

@@ -20,69 +20,64 @@ export default {
       const chartDom = document.getElementById('basicChart')
       const myChart = echarts.init(chartDom)
       const option = {
-        title: {
-          text: 'SALE SUMMARY',
-          subtext: 'this is a title',
-          left: 'left',
-          top: 'top',
-          textStyle: {
-            color: '#333',
-            fontStyle: 'normal',
-            fontWeight: 'bolder',
-            fontFamily: 'sans-serif',
-            fontSize: 22
-          }
-        },
         legend: {},
-        toolbox: {},
-        tooltip: {},
-        dataZoom: [],
-        visualMap: {},
-        xAxis: {},
-        yAxis: {},
+        tooltip: {
+          trigger: 'axis',
+          showContent: false
+        },
         dataset: {
           source: [
-            ['Mon', 'Money', 'Number', 'type', 'percent' ],
-            ['Jan', 34, 20, 'xx', 12 ],
-            ['Feb', 28, 14, 'yy', 42 ],
-            ['Mar', 45, 32, 'zz', 46 ],
-            ['Apr', 69, 46 ],
-            ['May', 39, 24 ],
-            ['Jun', 43, 23 ],
-            ['Jul', 33, 23 ],
-            ['Aug', 23, 13 ],
-            ['Sep', 23, 16 ],
-            ['Oct', 33, 20 ],
-            ['Nov', 39, 26 ],
-            ['Dec', 22, 15 ]
+            ['product', '2012', '2013', '2014', '2015', '2016', '2017'],
+            ['Milk Tea', 56.5, 82.1, 88.7, 70.1, 53.4, 85.1],
+            ['Matcha Latte', 51.1, 51.4, 55.1, 53.3, 73.8, 68.7],
+            ['Cheese Cocoa', 40.1, 62.2, 69.5, 36.4, 45.2, 32.5],
+            ['Walnut Brownie', 25.2, 37.1, 41.2, 18, 33.9, 49.1]
           ]
         },
-        grid: {
-          left: 100,
-          right: '5%',
-          height: '80%',
-          bottom: 50
-        },
+        xAxis: {type: 'category'},
+        yAxis: {gridIndex: 0},
+        grid: {top: '55%'},
         series: [
-          // {
-          //   type: 'pie',
-          //   center: ['65%, 60'],
-          //   radius: 35,
-          //   encode: { itemName: 3, value: 4 }
-          // },
+          {type: 'line', smooth: true, seriesLayoutBy: 'row', emphasis: {focus: 'series'}},
+          {type: 'line', smooth: true, seriesLayoutBy: 'row', emphasis: {focus: 'series'}},
+          {type: 'line', smooth: true, seriesLayoutBy: 'row', emphasis: {focus: 'series'}},
+          {type: 'line', smooth: true, seriesLayoutBy: 'row', emphasis: {focus: 'series'}},
           {
-            type: 'line',
+            type: 'pie',
+            id: 'pie',
+            radius: '30%',
+            center: ['50%', '25%'],
+            emphasis: {focus: 'data'},
+            label: {
+              formatter: '{b}: {@2012} ({d}%)'
+            },
             encode: {
-              x: 0,
-              y: 1
+              itemName: 'product',
+              value: '2012',
+              tooltip: '2012'
             }
           }
-          // {
-          //   type: 'bar',
-          //   encode: { x: 0, y: 2 }
-          // }
         ]
-      }
+      };
+
+      myChart.on('updateAxisPointer', function (event) {
+        const xAxisInfo = event.axesInfo[0];
+        if (xAxisInfo) {
+          const dimension = xAxisInfo.value + 1;
+          myChart.setOption({
+            series: {
+              id: 'pie',
+              label: {
+                formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+              },
+              encode: {
+                value: dimension,
+                tooltip: dimension
+              }
+            }
+          });
+        }
+      });
       // 绘制图表
       myChart.setOption(option);
     }
@@ -93,6 +88,5 @@ export default {
 #basicChart {
   width: 1000px;
   height: 600px;
-  border: 1px solid;
 }
 </style>
