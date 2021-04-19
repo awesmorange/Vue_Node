@@ -4,11 +4,11 @@ module.exports = {
   ],
   devServer: {
     proxy: {
-      "/application": {
+      "/gateway": {
         target: "http://localhost:3000/",
         changeOrigin: true,
         pathRewrite: {
-          "^/application": ""
+          "^/gateway": ""
         }
       }
     }

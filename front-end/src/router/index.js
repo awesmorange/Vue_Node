@@ -4,6 +4,11 @@ import Router from 'vue-router';
 Vue.use(Router);
 import { SystemPage, VuePage, VuetifyPage, EchartsPage, SweetalertPage, CSSPage, JSPage } from './config'
 const routes = [
+    {
+        path: '/',
+        name: 'signIn',
+        component: () => import('@/views/sys/SignIn')
+    },
     SystemPage,
     VuePage,
     VuetifyPage,

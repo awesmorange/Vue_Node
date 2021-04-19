@@ -5,13 +5,12 @@
 import axios from 'axios';
 import router from '../router';
 import store from '../store/index';
-import Vue from 'vue'
-
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 /**
  * SweetAlert 组件
  */
 const tip = (tile,text,type,confirmButtonText,timer) => {
-    Vue.swal({
+    Swal.mixin({
         title: tile,
         text: text,
         type: type,
@@ -26,7 +25,7 @@ const tip = (tile,text,type,confirmButtonText,timer) => {
  */
 const toLogin = () => {
     router.replace({
-        path: '/login',
+        path: '/signIn',
         query: {
             redirect: router.currentRoute.fullPath
         }
@@ -64,7 +63,7 @@ const errorHandle = (status, other) => {
     }}
 
 // 创建axios实例
-var instance = axios.create({    timeout: 1000 * 12});
+const instance = axios.create({    timeout: 1000 * 12});
 // 设置post请求头
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 /**

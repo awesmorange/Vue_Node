@@ -4,7 +4,7 @@ export const SystemPage = {
     component: DefaultFramesets,
     children: [
         {
-            path: '/',
+            path: '/home',
             name: 'home',
             component: () => import('@/components/Home')
         }

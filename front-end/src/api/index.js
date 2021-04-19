@@ -7,7 +7,6 @@
 import login from "@/api/model/login";
 
 // 导出接口
-export default {
+export const api = {
     login
-    // ……
 }

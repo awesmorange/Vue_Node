@@ -5,7 +5,7 @@
  */
 const base = {
     timeMachine: 'http://xjz.jsxin.net/',
-    panda : '/application/'
+    gateway : '/gateway'
 }
 
 export default base;

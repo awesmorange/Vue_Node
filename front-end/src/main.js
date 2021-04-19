@@ -17,7 +17,7 @@ import VueSweetalert2 from './plugins/vue-sweetalert2'
 Vue.use(VueSweetalert2)
 
 // axios api
-import api from './api' // 导入api接口
+import { api } from './api' // 导入api接口
 Vue.prototype.$api = api; // 将api挂载到vue的原型上
 
 new Vue({
